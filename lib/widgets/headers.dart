@@ -118,3 +118,135 @@ class _HeaderTriangularPainter extends CustomPainter {
   }
 
 }
+
+class HeaderPico extends StatelessWidget {
+   
+  const HeaderPico({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      // color: Color(0xff615AAB),
+      child: CustomPaint(
+        painter: _HeaderPicoPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderPicoPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+    final paint = new Paint();
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 2;
+
+    final path = new Path();
+    path.lineTo(0, size.height * 0.25);
+    path.lineTo(size.width*0.5, size.height * 0.30);
+    path.lineTo(size.width, size.height * 0.25);
+    path.lineTo(size.width, 0);
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    return true;
+  }
+
+}
+
+class HeaderCurvo extends StatelessWidget {
+   
+  const HeaderCurvo({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      // color: Color(0xff615AAB),
+      child: CustomPaint(
+        painter: _HeaderCurvoPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderCurvoPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+    final paint = new Paint();
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 2;
+
+    final path = new Path();
+    path.lineTo(0, size.height * 0.25);
+    path.quadraticBezierTo(size.width*0.5, size.height*0.40, size.width, size.height * 0.25);  
+    path.lineTo(size.width, 0);
+    
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    return true;
+  }
+
+}
+
+class HeaderWaves extends StatelessWidget {
+   
+  const HeaderWaves({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      // color: Color(0xff615AAB),
+      child: CustomPaint(
+        painter: _HeaderWavesPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderWavesPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+    final paint = new Paint();
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 2;
+
+    final path = new Path();
+    path.lineTo(0, size.height * 0.25);
+    //path.quadraticBezierTo(size.width*0.3, size.height*0.35, size.width * 0.5, size.height * 0.25);  
+    //path.quadraticBezierTo(size.width * 0.7, size.height * 0.15, size.width, size.height * 0.25);  
+    path.quadraticBezierTo(size.width*0.25, size.height*0.30, size.width * 0.5, size.height * 0.25);  
+    path.quadraticBezierTo(size.width * 0.75, size.height * 0.20, size.width, size.height * 0.25);  
+    path.lineTo(size.width, 0);
+    
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    return true;
+  }
+
+}
