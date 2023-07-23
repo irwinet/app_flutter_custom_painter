@@ -13,7 +13,8 @@ class HeadersPage extends StatelessWidget {
     return const Scaffold(
       // body: HeaderCuadrado()
       // body: HeaderBordersRedondeados()
-      body: HeaderDiagonal(),
+      // body: HeaderDiagonal(),
+      body: HeaderTriangular(),
     );
   }
 }
