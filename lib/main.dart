@@ -1,4 +1,5 @@
 // import 'package:app_flutter_custom_painter/pages/animaciones_page.dart';
+import 'package:app_flutter_custom_painter/pages/circular_progress_page.dart';
 import 'package:app_flutter_custom_painter/retos/cuadro_animado_page.dart';
 // import 'package:app_flutter_custom_painter/pages/headers_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Diseños App',
       // home: HeadersPage()
       // home: AnimacionesPage()
-      home: CuadradoAnimadoPage(),
+      // home: CuadradoAnimadoPage(),
+      home: CircularProgressPage(),
     );
   }
 }
