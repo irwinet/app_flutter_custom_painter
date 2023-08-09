@@ -1,6 +1,7 @@
 // import 'package:app_flutter_custom_painter/pages/animaciones_page.dart';
 // import 'package:app_flutter_custom_painter/labs/circular_progress_page.dart';
-import 'package:app_flutter_custom_painter/pages/graficas_circulares_page.dart';
+// import 'package:app_flutter_custom_painter/pages/graficas_circulares_page.dart';
+import 'package:app_flutter_custom_painter/pages/slideshow_page.dart';
 // import 'package:app_flutter_custom_painter/retos/cuadro_animado_page.dart';
 // import 'package:app_flutter_custom_painter/pages/headers_page.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       // home: AnimacionesPage()
       // home: CuadradoAnimadoPage(),
       // home: CircularProgressPage(),
-      home: GraficasCircularesPage(),
+      // home: GraficasCircularesPage(),
+      home: SlideShowPage(),
     );
   }
 }
