@@ -13,6 +13,8 @@ class SlideshowPage extends StatelessWidget {
       backgroundColor: Colors.purple,
       body: Slideshow(
         // puntosArriba: true,
+        bulletPrimario : 20,
+        bulletSecundario : 12,
         colorPrimario: Colors.black,
         colorSecundario: Colors.white,
         slides: <Widget>[
