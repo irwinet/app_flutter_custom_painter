@@ -4,7 +4,8 @@
 // import 'package:app_flutter_custom_painter/labs/slideshow_page.dart';
 // import 'package:app_flutter_custom_painter/retos/cuadro_animado_page.dart';
 // import 'package:app_flutter_custom_painter/pages/headers_page.dart';
-import 'package:app_flutter_custom_painter/pages/slideshow_page.dart';
+// import 'package:app_flutter_custom_painter/pages/slideshow_page.dart';
+import 'package:app_flutter_custom_painter/pages/pinterest_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       // home: CircularProgressPage(),
       // home: GraficasCircularesPage(),
       // home: SlideShowPage(),
-      home: SlideshowPage(),
+      // home: SlideshowPage(),
+      home: PinterestPage(),
     );
   }
 }
