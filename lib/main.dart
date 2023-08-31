@@ -7,6 +7,7 @@
 // import 'package:app_flutter_custom_painter/pages/slideshow_page.dart';
 // import 'package:app_flutter_custom_painter/pages/pinterest_page.dart';
 // import 'package:app_flutter_custom_painter/pages/emergency_page.dart';
+import 'package:app_flutter_custom_painter/pages/launcher_page.dart';
 import 'package:app_flutter_custom_painter/pages/slider_list_page.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
       // home: SlideshowPage(),
       // home: PinterestPage(),
       // home: EmergencyPage(),
-      home: SliderListPage(),
+      // home: SliderListPage(),1
+      home: LauncherPage(),
     );
   }
 }
