@@ -9,9 +9,16 @@
 // import 'package:app_flutter_custom_painter/pages/emergency_page.dart';
 import 'package:app_flutter_custom_painter/pages/launcher_page.dart';
 import 'package:app_flutter_custom_painter/pages/slider_list_page.dart';
+import 'package:app_flutter_custom_painter/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(
+  ChangeNotifierProvider(
+    create: (_) => new ThemeChanger(),
+    child: MyApp(),
+  )
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
