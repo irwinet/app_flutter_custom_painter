@@ -7,18 +7,30 @@
 // import 'package:app_flutter_custom_painter/pages/slideshow_page.dart';
 // import 'package:app_flutter_custom_painter/pages/pinterest_page.dart';
 // import 'package:app_flutter_custom_painter/pages/emergency_page.dart';
+import 'package:app_flutter_custom_painter/models/layout_model.dart';
 import 'package:app_flutter_custom_painter/pages/launcher_page.dart';
+import 'package:app_flutter_custom_painter/pages/launcher_tablet_page.dart';
 import 'package:app_flutter_custom_painter/pages/slider_list_page.dart';
 import 'package:app_flutter_custom_painter/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(
-  ChangeNotifierProvider(
-    create: (_) => new ThemeChanger(2),
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider<ThemeChanger>(create: (_) => new ThemeChanger(2)),
+      ChangeNotifierProvider<LayoutModel>(create: (_) => new LayoutModel())
+    ],
     child: MyApp(),
   )
 );
+
+// void main() => runApp(
+//   ChangeNotifierProvider(
+//     create: (_) => new ThemeChanger(2),
+//     child: MyApp(),
+//   )
+// );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -41,7 +53,23 @@ class MyApp extends StatelessWidget {
       // home: PinterestPage(),
       // home: EmergencyPage(),
       // home: SliderListPage(),1
-      home: LauncherPage(),
+      // home: LauncherPage(),
+      home: OrientationBuilder(
+        builder: (context, orientation) {
+          // print('Orientation: $orientation');
+
+          final screenSize = MediaQuery.of(context).size;
+          if(screenSize.width > 500){
+            return LauncherTabletPage();
+          } else {
+            return LauncherPage();
+          }
+
+          // return Container(
+          //   child: LauncherPage(),
+          // );
+        },
+      ),
     );
   }
 }
